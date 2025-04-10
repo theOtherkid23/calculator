@@ -1,0 +1,65 @@
+body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.container{
+    border: 4px solid black;
+    height: 600px;
+    width: 500px;
+    background-color: #205080;
+    border-radius: 20px;
+}
+.display{
+    display: flex;
+    border:2px solid black;
+    height: 75px;
+    width: 475px;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: gray;
+}
+.numbers button{
+    height:60px;
+    width: 60px;
+    margin-left:15px;
+    margin-right: 15px;
+}
+.numbers{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 450px;
+    width: 375px;
+    padding: 5px;
+    margin-left: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.operations{
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+    gap: 20px;
+    height: 400px;
+    justify-content: center;
+    margin: 12px;
+}
+.operations button{
+    height: 50px;
+    width: 60px;
+}
+.map{
+    display: flex;
+}
+.outcomeText{
+    font-size: 48px;
+    font-family:Impact;
+}
