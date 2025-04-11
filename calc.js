@@ -176,6 +176,29 @@ function decimal(){
 }
 
 function updateDisplay(){
-    display.textContent = displayValue
+    //display.textContent = displayValue
+    displayText.textContent = displayValue
 }
 
+const clickEvent = new Event("click",{bubbles: true, cancelable: true})
+function keyboardHandler(key, button){
+    document.addEventListener("keyup",(e) =>{
+        if(e.key === key){
+            button.dispatchEvent(clickEvent)
+        }
+    })
+}
+
+numberBtn.forEach((numKey) =>{
+    keyboardHandler(numKey.textContent, numKey)
+})
+
+operatorBtn.forEach((opKey) =>{
+    keyboardHandler(opKey.textContent, opKey)
+})
+
+keyboardHandler("Delete", allClearBtn)
+keyboardHandler("Backspace", clearBtn)
+keyboardHandler("=", equalsBtn)
+keyboardHandler("Enter", equalsBtn)
+keyboardHandler(".", decimalBtn)
